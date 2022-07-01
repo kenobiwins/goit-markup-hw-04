@@ -7,6 +7,7 @@
   --primary-text-color: #757575;
   --accent-color: #2196f3;
   --social-color: #afb1b8;
+  --hero-button-accent: #188ce8;
 }
 /* base */
 html {
@@ -46,6 +47,20 @@ ul {
 img {
   max-width: 100%;
   display: block;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 /* header */
@@ -110,8 +125,6 @@ img {
 }
 
 .icon-contact {
-  width: 20px;
-  height: 20px;
   margin-right: 10px;
   fill: currentColor;
 }
@@ -120,12 +133,12 @@ img {
   display: flex;
   align-items: center;
   color: var(--primary-text-color);
+
+  cursor: pointer;
 }
 .contact:hover,
 .contact:focus {
   color: var(--accent-color);
-
-  cursor: pointer;
 }
 
 /* logo */
@@ -175,6 +188,7 @@ img {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.86;
+  letter-spacing: 0.06em;
 
   width: 200px;
   height: 50px;
@@ -184,15 +198,14 @@ img {
 
   background-color: var(--accent-color);
   color: var(--background-white);
+
+  cursor: pointer;
 }
 .hero-button:hover,
 .hero-button:focus {
-  background-color: var(--accent-color);
+  background-color: var(--hero-button-accent);
   color: var(--background-white);
-  cursor: pointer;
 }
-/* .hero-button:active {
-
 
 /* main page */
 
@@ -268,23 +281,33 @@ img {
 
 .social-list {
   display: flex;
+  justify-content: center;
+  align-items: center;
   margin-top: 16px;
-  padding: 0 32px;
 
   gap: 10px;
 }
 
 .social-link {
+  width: 44px;
+  height: 44px;
+
   display: flex;
-  padding: 12px;
+  justify-content: center;
+  align-items: center;
+
   border-radius: 50%;
-  fill: var(--social-color);
+  color: var(--social-color);
 }
 
 .social-link:hover,
 .social-link:focus {
-  fill: var(--background-white);
+  color: var(--background-white);
   background-color: var(--accent-color);
+}
+
+.social-icon {
+  fill: currentColor;
 }
 
 /* regular-clients */
@@ -295,23 +318,27 @@ img {
 }
 
 .regular-link {
-  display: flex;
   width: 170px;
   height: 92px;
+
+  display: flex;
   justify-content: center;
   align-items: center;
 
   border: var(--social-color) 1px solid;
   border-radius: 4px;
 
-  fill: var(--social-color);
+  color: var(--social-color);
 }
 
 .regular-link:hover,
 .regular-link:focus {
-  fill: var(--accent-color);
+  color: var(--accent-color);
   border: var(--accent-color) 1px solid;
-  border-radius: 4px;
+}
+
+.regular-icon {
+  fill: currentColor;
 }
 
 /* portfolio-main */
@@ -400,15 +427,19 @@ img {
 
 .button {
   padding: 6px 22px;
+
   font-family: inherit;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.63;
   letter-spacing: 0.03em;
+
   border: none;
   border-radius: 4px;
+
   color: var(--title-text-color);
   background-color: var(--background-section);
+  cursor: pointer;
 }
 
 .button:hover,
@@ -418,22 +449,11 @@ img {
   border-radius: 4px;
   color: var(--background-white);
   background-color: var(--accent-color);
-
-  cursor: pointer;
 }
 
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
+.active-button {
+  color: var(--background-white);
+  background-color: var(--accent-color);
 }
 
 /* footer */
